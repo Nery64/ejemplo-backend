@@ -1,14 +1,14 @@
-import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put } from '@nestjs/common';
+import { Controller, Delete, Get, Param, Body, ParseIntPipe, Post, Put } from '@nestjs/common';
 import { ProductService } from './product.service';
 
 @Controller('product')
 export class ProductController {
     
-constructor (private readonly ProductService: ProductService){}
+    constructor (private readonly ProductService: ProductService){}
 
     @Get()
         getProducts(){
-            return this.ProductService.findAll();)
+            return this.ProductService.findAll();
         }
 
 
